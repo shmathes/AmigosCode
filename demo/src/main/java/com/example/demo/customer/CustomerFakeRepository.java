@@ -9,7 +9,7 @@ import java.util.List;
 
 //@Component(value = "fake")
 @Repository
-@Qualifier(value = "fake")
+//@Qualifier(value = "fake")
 public class CustomerFakeRepository implements CustomerRepo
 {
     @Override
