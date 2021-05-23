@@ -16,8 +16,8 @@ public class CustomerFakeRepository implements CustomerRepo
     public List<Customer> getCustomers()
     {
         return Arrays.asList(
-                new Customer(1L, "James Bond"),
-                new Customer(2L, "Shawn Mathes")
+                new Customer(1L, "James Bond", "password123"),
+                new Customer(2L, "Shawn Mathes", "123password")
         );
     }
 }
