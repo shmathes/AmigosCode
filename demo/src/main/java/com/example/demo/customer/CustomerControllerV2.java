@@ -2,16 +2,17 @@ package com.example.demo.customer;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
-@RequestMapping(path = "api/v1/customer")
+@RequestMapping(path = "api/v2/customer")
 @RestController
-@Deprecated
-public class CustomerController
+public class CustomerControllerV2
 {
     private CustomerService customerService;
 
-    public CustomerController(CustomerService customerService)
+    public CustomerControllerV2(CustomerService customerService)
     {
         this.customerService = customerService;
     }
@@ -19,7 +20,10 @@ public class CustomerController
     @GetMapping(value = "all")
     List<Customer> getCustomer()
     {
-        return customerService.getCustomer();
+
+        return Collections.singletonList(
+                new Customer(0L, "V2", "v2")
+        );
     }
     @PostMapping
     void createNewCustomer(@RequestBody Customer customer){
