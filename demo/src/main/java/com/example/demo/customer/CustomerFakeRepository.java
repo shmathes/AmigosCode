@@ -1,11 +1,15 @@
 package com.example.demo.customer;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
 import java.util.List;
 
-@Component(value = "fake")
+//@Component(value = "fake")
+@Repository
+//@Qualifier(value = "fake")
 public class CustomerFakeRepository implements CustomerRepo
 {
     @Override
