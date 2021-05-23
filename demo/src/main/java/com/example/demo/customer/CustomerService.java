@@ -8,7 +8,6 @@ import java.util.List;
 @Service
 public class CustomerService
 {
-
     private CustomerRepo customerRepo;
 
     //@Qualifier("fake") => Will tell Spring to inject the CustomerRepo implementation with a value of fake
