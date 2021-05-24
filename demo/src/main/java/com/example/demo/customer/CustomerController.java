@@ -19,7 +19,7 @@ public class CustomerController
     @GetMapping(value = "all")
     List<Customer> getCustomer()
     {
-        return customerService.getCustomer();
+        return customerService.getCustomers();
     }
     @PostMapping
     void createNewCustomer(@RequestBody Customer customer){
