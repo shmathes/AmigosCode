@@ -17,9 +17,20 @@ public class CustomerService
         this.customerRepo = customerRepo;
     }
 
-    List<Customer> getCustomer()
+    List<Customer> getCustomers()
     {
-
         return customerRepo.getCustomers();
+    }
+
+    Customer getCustomer(Long id){
+        return customerRepo.getCustomer(id);
+    }
+
+    void postCustomer(Customer customer){
+        this.customerRepo.postCustomer(customer);
+    }
+
+    void deleteCustomer(Long id){
+        customerRepo.deleteCustomer(id);
     }
 }

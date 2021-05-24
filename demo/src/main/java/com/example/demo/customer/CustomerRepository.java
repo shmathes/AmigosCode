@@ -20,4 +20,19 @@ public class CustomerRepository implements CustomerRepo
                 new Customer(1L, "Implement DB", "todo")
         );
     }
+
+    @Override
+    public Customer getCustomer(Long id) {
+        return null;
+    }
+
+    @Override
+    public void postCustomer(Customer customer) {
+
+    }
+
+    @Override
+    public void deleteCustomer(Long id) {
+
+    }
 }
