@@ -13,10 +13,11 @@ import java.util.List;
 //@Qualifier(value = "fake")
 public class CustomerFakeRepository implements CustomerRepo
 {
+    private static Long id = 2L;
     private ArrayList<Customer> customers = new ArrayList<>(
             Arrays.asList(
-                    new Customer(1L, "James", "pass123"),
-                    new Customer(2L, "Shawn", "123pass")
+                    new Customer(1L, "James", "pass123", "email@email.com"),
+                    new Customer(2L, "Shawn", "123pass", "email@email.com")
             )
     );
 
@@ -36,7 +37,8 @@ public class CustomerFakeRepository implements CustomerRepo
     @Override
     public void postCustomer(Customer customer)
     {
-        Customer c = new Customer(customer.getId(), customer.getName(), customer.getPassword());
+        id += 1;
+        Customer c = new Customer(id, customer.getName(), customer.getPassword(), customer.getEmail());
         customers.add(c);
     }
 
